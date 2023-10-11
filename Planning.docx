@@ -26,3 +26,39 @@ Imgur is categorzed with tags. Tags are elements of the post itself.
 reddit and GameFAQs is categorized by specific topics. Topics are directly posted to the related category.
 
 Basing our model off of GameFAQs
+
+Made up of Gameboards, which contain posts categorized by the type of post, including stuff like news, reviews, QnA, ect.
+
+Object Gameboard:{
+List<Guide>
+List<QnA>
+List<Trophies>
+List<Reviews>
+List<Media>
+List<News>
+List<Board>
+}
+
+Base Post:{
+string Title
+List<Comments>
+string dateposted
+string user
+list<string> tags
+string bodytext
+}
+
+QnA : Post{
+
+}
+
+Media : Post{
+
+media
+}
+
+
+
+
+
+
