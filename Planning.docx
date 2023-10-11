@@ -1,5 +1,28 @@
 reddit
 https://www.reddit.com/
 
-imgur
+Imgur
 https://imgur.com/
+
+GameFAQs
+https://gamefaqs.gamespot.com/
+
+reddit
+Has it's own subreddits, you can sort post by different variables (highest upvoted, newest, etc.). Features to up and down vote. Can have text, image, polls as post.
+Post is within a subreddit which you can comment, upvote, and downvote.
+
+Imgur
+Tags are the system used to "tag" images. The forum is based on images and videos, which show upvotes, downvotes, comments, favoriting, and views. 
+
+GameFAQs
+Made up of different boards (Games, Community, Systems) and you make topics inside of that board and you can comments to the topics. 
+
+Similarities
+reddit and GameFAQs share the subdomain idea, in which there are specific boards that contain topics within the main site. 
+They all have community metrics (upvotes, downvotes, comments)
+
+Differences
+Imgur is categorzed with tags. Tags are elements of the post itself.
+reddit and GameFAQs is categorized by specific topics. Topics are directly posted to the related category.
+
+Basing our model off of GameFAQs
