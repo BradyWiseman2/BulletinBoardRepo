@@ -61,7 +61,11 @@ namespace Bulletin_Board_Project
 
         private void lBoxTopics_SelectedIndexChanged(object sender, EventArgs e)
         {
-             
+            lBoxPosts.Items.Clear();
+            foreach(Post post in GAMING.topicList[lBoxTopics.SelectedIndex].posts)
+            {
+                lBoxPosts.Items.Add(post.Text);
+            }
         }
     }
 }

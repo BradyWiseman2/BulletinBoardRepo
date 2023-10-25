@@ -14,6 +14,8 @@ namespace Bulletin_Board_Project
       
         public string Username { get { return username; } }
         public DateTime PostDate { get { return postDate; } }
+        
+        public string Text { get { return text; } } 
 
         public Post(string _username, string _text)
         {
