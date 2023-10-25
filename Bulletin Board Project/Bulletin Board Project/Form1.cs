@@ -25,14 +25,13 @@ namespace Bulletin_Board_Project
         {
             if (lBoxTopics.SelectedItem != null)
             {
-                Board.BoardList[0].topicList[lBoxTopics.SelectedIndex].posts.Add(new Post(
+                GAMING.topicList[lBoxTopics.SelectedIndex].posts.Add(new Post(
                    "GOD GAMER",
                    tBoxPost.Text));
-            }
-            else
-            {
+                lBoxPosts.Items.Add(GAMING.topicList[lBoxTopics.SelectedIndex].posts.Last().Text);
 
             }
+
 
         }
 
@@ -49,6 +48,8 @@ namespace Bulletin_Board_Project
 
                         )
                     ));
+            lBoxTopics.Items.Add (GAMING.topicList.Last().TopicName);
+
              
         }
 
