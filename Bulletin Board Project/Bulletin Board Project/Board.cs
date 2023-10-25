@@ -10,9 +10,11 @@ namespace Bulletin_Board_Project
     {
         public static List<Board> BoardList = new List<Board>();
         private string boardName;
-        private List<Topic> topicList;
+        public List<Topic> topicList;
 
         public int Topics { get {  return topicList.Count; } }
+        public string BoardName { get { return boardName; } }
+
         public int Messages
         {
             get
@@ -24,7 +26,15 @@ namespace Bulletin_Board_Project
                 }
                 return count;
             }
-        }    
+        }
+        
+        public Board(string bname)
+        {                      
+                boardName = bname;
+                topicList = new List<Topic>();            
+        }
+      
+        
                  
     }
 }

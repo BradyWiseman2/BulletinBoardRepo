@@ -1,0 +1,19 @@
+C:\Users\brady.wiseman\source\repos\Bulletin Board Project\Bulletin Board Project\bin\Debug\net6.0-windows\Bulletin Board Project.exe
+C:\Users\brady.wiseman\source\repos\Bulletin Board Project\Bulletin Board Project\bin\Debug\net6.0-windows\Bulletin Board Project.deps.json
+C:\Users\brady.wiseman\source\repos\Bulletin Board Project\Bulletin Board Project\bin\Debug\net6.0-windows\Bulletin Board Project.runtimeconfig.json
+C:\Users\brady.wiseman\source\repos\Bulletin Board Project\Bulletin Board Project\bin\Debug\net6.0-windows\Bulletin Board Project.dll
+C:\Users\brady.wiseman\source\repos\Bulletin Board Project\Bulletin Board Project\bin\Debug\net6.0-windows\Bulletin Board Project.pdb
+C:\Users\brady.wiseman\source\repos\Bulletin Board Project\Bulletin Board Project\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
+C:\Users\brady.wiseman\source\repos\Bulletin Board Project\Bulletin Board Project\obj\Debug\net6.0-windows\Bulletin Board Project.csproj.AssemblyReference.cache
+C:\Users\brady.wiseman\source\repos\Bulletin Board Project\Bulletin Board Project\obj\Debug\net6.0-windows\Bulletin_Board_Project.Form1.resources
+C:\Users\brady.wiseman\source\repos\Bulletin Board Project\Bulletin Board Project\obj\Debug\net6.0-windows\Bulletin Board Project.csproj.GenerateResource.cache
+C:\Users\brady.wiseman\source\repos\Bulletin Board Project\Bulletin Board Project\obj\Debug\net6.0-windows\Bulletin Board Project.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\brady.wiseman\source\repos\Bulletin Board Project\Bulletin Board Project\obj\Debug\net6.0-windows\Bulletin Board Project.AssemblyInfoInputs.cache
+C:\Users\brady.wiseman\source\repos\Bulletin Board Project\Bulletin Board Project\obj\Debug\net6.0-windows\Bulletin Board Project.AssemblyInfo.cs
+C:\Users\brady.wiseman\source\repos\Bulletin Board Project\Bulletin Board Project\obj\Debug\net6.0-windows\Bulletin Board Project.csproj.CoreCompileInputs.cache
+C:\Users\brady.wiseman\source\repos\Bulletin Board Project\Bulletin Board Project\obj\Debug\net6.0-windows\Bulletin Board Project.csproj.CopyComplete
+C:\Users\brady.wiseman\source\repos\Bulletin Board Project\Bulletin Board Project\obj\Debug\net6.0-windows\Bulletin Board Project.dll
+C:\Users\brady.wiseman\source\repos\Bulletin Board Project\Bulletin Board Project\obj\Debug\net6.0-windows\refint\Bulletin Board Project.dll
+C:\Users\brady.wiseman\source\repos\Bulletin Board Project\Bulletin Board Project\obj\Debug\net6.0-windows\Bulletin Board Project.pdb
+C:\Users\brady.wiseman\source\repos\Bulletin Board Project\Bulletin Board Project\obj\Debug\net6.0-windows\Bulletin Board Project.genruntimeconfig.cache
+C:\Users\brady.wiseman\source\repos\Bulletin Board Project\Bulletin Board Project\obj\Debug\net6.0-windows\ref\Bulletin Board Project.dll
