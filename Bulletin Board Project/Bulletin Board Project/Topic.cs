@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Bulletin_Board_Project
 {
-    class Topic
+     public class Topic
     {
         private string topicName;
         public List<Post> posts;
-        public string TopicName { get { return topicName; } }
+        public string TopicName { get { return topicName; } set { this.topicName = value; } }
         public string CreatedBy { get { return posts[0].Username; } }
         public DateTime LastPost { get { return posts.Last().PostDate; } }
 

@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace Bulletin_Board_Project
 {
-    class Board
+     public class Board
     {
         public static List<Board> BoardList = new List<Board>();
         private string boardName;
         public List<Topic> topicList;
 
         public int Topics { get {  return topicList.Count; } }
-        public string BoardName { get { return boardName; } }
+        public string BoardName { get { return boardName; } set { this.boardName = value; } }
 
         public int Messages
         {

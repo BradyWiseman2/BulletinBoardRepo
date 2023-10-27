@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace Bulletin_Board_Project
 {
-    class Post
+    public class Post
     {
         private DateTime postDate = DateTime.Now;
         private string username;
         private string text;
       
-        public string Username { get { return username; } }
-        public DateTime PostDate { get { return postDate; } }
+        public string Username { get { return username; } set { this.username = value; } }
+        public DateTime PostDate { get { return postDate; } set { this.postDate = value; } }
         
-        public string Text { get { return text; } } 
+        public string Text { get { return text; } set { this.text = value; } } 
 
         public Post(string _username, string _text)
         {

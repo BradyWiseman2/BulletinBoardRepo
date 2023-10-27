@@ -7,13 +7,13 @@ using System.Security.Cryptography;
 
 namespace Bulletin_Board_Project
 {
-    enum PermissionLevel
+   public enum PermissionLevel
     {
         User,
         Moderator,
         Admin
     }
-    class User
+    public class User
     {
         private string _username;
         private string _password;
@@ -28,7 +28,7 @@ namespace Bulletin_Board_Project
         public User(string username, string password, PermissionLevel permLevel)
         {
             _username = username;
-            _password = UserHelper.Md5Hash(password);
+            _password = (password);
             _permLevel = permLevel;
         }
 

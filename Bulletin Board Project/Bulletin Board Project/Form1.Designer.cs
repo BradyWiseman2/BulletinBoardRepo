@@ -34,6 +34,7 @@
             tBoxPost = new TextBox();
             tBoxTopic = new TextBox();
             btnTopic = new Button();
+            lblUser = new Label();
             SuspendLayout();
             // 
             // lBoxTopics
@@ -89,11 +90,21 @@
             btnTopic.UseVisualStyleBackColor = true;
             btnTopic.Click += btnTopic_Click;
             // 
+            // lblUser
+            // 
+            lblUser.AutoSize = true;
+            lblUser.Location = new Point(546, 328);
+            lblUser.Name = "lblUser";
+            lblUser.Size = new Size(38, 15);
+            lblUser.TabIndex = 6;
+            lblUser.Text = "label1";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(lblUser);
             Controls.Add(btnTopic);
             Controls.Add(tBoxTopic);
             Controls.Add(tBoxPost);
@@ -114,5 +125,6 @@
         private TextBox tBoxPost;
         private TextBox tBoxTopic;
         private Button btnTopic;
+        private Label lblUser;
     }
 }

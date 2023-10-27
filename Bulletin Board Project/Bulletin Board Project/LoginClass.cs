@@ -31,7 +31,9 @@ namespace Bulletin_Board_Project
             {
                 //Deserialze form disk, to check password
                 User u = JsonConvert.DeserializeObject<User>(File.ReadAllText(username + ".json"));
-                if (Md5Hash(password) == u.Password)
+                string test = Md5Hash(password);
+                string test2 = u.Password;
+                if (test == test2)
                 {
                     //login success
                     return true;
@@ -55,7 +57,7 @@ namespace Bulletin_Board_Project
             User u = new User(username, password, PermissionLevel.User);
             
              
-           
+            
 
             //Serialze the user to a file on disk
             string output = JsonConvert.SerializeObject(u);
