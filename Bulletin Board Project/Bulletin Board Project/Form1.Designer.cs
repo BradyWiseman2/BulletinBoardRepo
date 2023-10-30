@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             lBoxTopics = new ListBox();
-            lBoxPosts = new ListBox();
             btnPost = new Button();
             tBoxPost = new TextBox();
             btnTopic = new Button();
             lblUser = new Label();
+            lBoxPosts = new ListBox();
             SuspendLayout();
             // 
             // lBoxTopics
@@ -46,20 +46,11 @@
             lBoxTopics.TabIndex = 0;
             lBoxTopics.SelectedIndexChanged += lBoxTopics_SelectedIndexChanged;
             // 
-            // lBoxPosts
-            // 
-            lBoxPosts.FormattingEnabled = true;
-            lBoxPosts.ItemHeight = 15;
-            lBoxPosts.Location = new Point(279, 12);
-            lBoxPosts.Name = "lBoxPosts";
-            lBoxPosts.Size = new Size(509, 199);
-            lBoxPosts.TabIndex = 1;
-            // 
             // btnPost
             // 
             btnPost.Location = new Point(672, 216);
             btnPost.Name = "btnPost";
-            btnPost.Size = new Size(106, 23);
+            btnPost.Size = new Size(116, 23);
             btnPost.TabIndex = 2;
             btnPost.Text = "Post Cringe";
             btnPost.UseVisualStyleBackColor = true;
@@ -85,11 +76,22 @@
             // lblUser
             // 
             lblUser.AutoSize = true;
-            lblUser.Location = new Point(12, 426);
+            lblUser.Font = new Font("Segoe UI", 36F, FontStyle.Bold, GraphicsUnit.Point);
+            lblUser.Location = new Point(0, 385);
             lblUser.Name = "lblUser";
-            lblUser.Size = new Size(38, 15);
+            lblUser.Size = new Size(166, 65);
             lblUser.TabIndex = 6;
             lblUser.Text = "label1";
+            // 
+            // lBoxPosts
+            // 
+            lBoxPosts.FormattingEnabled = true;
+            lBoxPosts.HorizontalScrollbar = true;
+            lBoxPosts.ItemHeight = 15;
+            lBoxPosts.Location = new Point(279, 12);
+            lBoxPosts.Name = "lBoxPosts";
+            lBoxPosts.Size = new Size(509, 199);
+            lBoxPosts.TabIndex = 1;
             // 
             // Form1
             // 
@@ -111,10 +113,10 @@
         #endregion
 
         private ListBox lBoxTopics;
-        private ListBox lBoxPosts;
         private Button btnPost;
         private TextBox tBoxPost;
         private Button btnTopic;
         private Label lblUser;
+        private ListBox lBoxPosts;
     }
 }

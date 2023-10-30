@@ -17,9 +17,9 @@ namespace Bulletin_Board_Project
 
             try
             {
-                string text = File.ReadAllText("GAMING.json");
+                string text = File.ReadAllText("T:\\Gamin\\GAMING.json");
                 GAMING = JsonConvert.DeserializeObject<Board>(text);
-                dynamic o = JsonConvert.DeserializeObject<Board>(File.ReadAllText("GAMING.json"));
+                dynamic o = JsonConvert.DeserializeObject<Board>(File.ReadAllText("T:\\Gamin\\GAMING.json"));
             }
             catch
             {
@@ -41,18 +41,22 @@ namespace Bulletin_Board_Project
 
         private void btnPost_Click(object sender, EventArgs e)
         {
-            if (lBoxTopics.SelectedItem != null)
+            if (lBoxTopics.SelectedItem != null && tBoxPost.Text != "")
             {
                 GAMING.topicList[lBoxTopics.SelectedIndex].posts.Add(new Post(
                    LoggedInUser.UserName,
                    tBoxPost.Text));
-
+                Save();
+                RefreshPosts();
+                tBoxPost.Text = "";
 
             }
+            else
+            {
+                MessageBox.Show("Type something");
+            }
 
-            Save();
-            RefreshPosts();
-            tBoxPost.Text = "";
+
         }
 
         private void btnTopic_Click(object sender, EventArgs e)
@@ -85,7 +89,7 @@ namespace Bulletin_Board_Project
         private void Save()
         {
             string output = JsonConvert.SerializeObject(GAMING);
-            File.WriteAllText(GAMING.BoardName + ".json", output);
+            File.WriteAllText("T:\\Gamin\\"+GAMING.BoardName + ".json", output);
         }
 
 

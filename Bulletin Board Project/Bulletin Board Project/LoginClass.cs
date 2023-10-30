@@ -27,10 +27,10 @@ namespace Bulletin_Board_Project
         public static bool Login(string username, string password)
         {
             //See if a file exists
-            if (File.Exists(username + ".json"))
+            if (File.Exists("T:\\Gamin\\Users\\" +username + ".json"))
             {
                 //Deserialze form disk, to check password
-                User u = JsonConvert.DeserializeObject<User>(File.ReadAllText(username + ".json"));
+                User u = JsonConvert.DeserializeObject<User>(File.ReadAllText("T:\\Gamin\\Users\\" + username + ".json"));
                 string test = Md5Hash(password);
                 string test2 = u.Password;
                 if (test == test2)
@@ -49,7 +49,7 @@ namespace Bulletin_Board_Project
         {
             bool result = false;
             //Come back and make sure no duplicate exists
-            if (File.Exists(username + ".json"))
+            if (File.Exists("T:\\Gamin\\Users\\" + username + ".json"))
             {
                 return false;
             }
@@ -62,7 +62,7 @@ namespace Bulletin_Board_Project
             //Serialze the user to a file on disk
             string output = JsonConvert.SerializeObject(u);
             //Save that object to disk
-            File.WriteAllText(username + ".json", output);
+            File.WriteAllText("T:\\Gamin\\Users\\" + username + ".json", output);
             result = true;
 
             return result;
