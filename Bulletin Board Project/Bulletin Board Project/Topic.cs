@@ -22,5 +22,22 @@ namespace Bulletin_Board_Project
             posts = new List<Post>();
             posts.Add(firstpost);
         }
+
+        public List<string> UpdatePosts()
+        {
+            List<string> strings = new List<string>();
+            foreach (Post post in posts)
+            {
+                string final = "";
+                final += post.PostDate.ToShortDateString();
+                final += " ";
+                final += post.Username;
+                final += ": ";
+                final += post.Text;
+                strings.Add(final);
+
+            }
+            return strings;
+        }
     }
 }

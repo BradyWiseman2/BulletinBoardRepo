@@ -1,4 +1,5 @@
 using Newtonsoft.Json;
+using System.Runtime.CompilerServices;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Bulletin_Board_Project
@@ -13,6 +14,7 @@ namespace Bulletin_Board_Project
         public Form1(User user)
         {
             InitializeComponent();
+
             try
             {
                 string text = File.ReadAllText("GAMING.json");
@@ -33,7 +35,7 @@ namespace Bulletin_Board_Project
                 lBoxTopics.Items.Add(topic.TopicName);
             }
             LoggedInUser = user;
-            lblUser.Text = LoggedInUser.UserName;
+            lblUser.Text = "Logged in as: " + LoggedInUser.UserName;
 
         }
 
@@ -43,47 +45,59 @@ namespace Bulletin_Board_Project
             {
                 GAMING.topicList[lBoxTopics.SelectedIndex].posts.Add(new Post(
                    LoggedInUser.UserName,
-                   tBoxPost.Text));              
-            }       
-            string output = JsonConvert.SerializeObject(GAMING);
-          
-            File.WriteAllText(GAMING.BoardName + ".json", output);
+                   tBoxPost.Text));
+
+
+            }
+
+            Save();
+            RefreshPosts();
+            tBoxPost.Text = "";
         }
 
         private void btnTopic_Click(object sender, EventArgs e)
         {
-            Board.BoardList[0].topicList.Add(
-                new Topic
-                (
-                    tBoxTopic.Text,
-                    new Post
-                    (
-                        "GAMER GOD",
-                        tBoxPost.Text
+            newTopic topicmaker = new newTopic(LoggedInUser, GAMING);
+            topicmaker.Show();
 
-                        )
-                    ));
-            lBoxTopics.Items.Add(GAMING.topicList.Last().TopicName);
-
+            topicmaker.FormClosed += Topicmaker_FormClosed;
 
         }
 
-        private void refreshlBoxes()
+        private void Topicmaker_FormClosed(object? sender, FormClosedEventArgs e)
         {
 
-            lBoxPosts.Items.Add(LoggedInUser.UserName + ": " + GAMING.topicList[lBoxTopics.SelectedIndex].posts.Last().Text
-                     + GAMING.topicList[lBoxTopics.SelectedIndex].posts.Last().PostDate.ToString());
-
+            lBoxTopics.Items.Clear();
+            foreach (Topic topic in GAMING.topicList)
+            {
+                lBoxTopics.Items.Add(topic.TopicName);
+            }
         }
+
+        private void RefreshPosts()
+        {
+            lBoxPosts.Items.Clear();
+            foreach (string post in GAMING.topicList[lBoxTopics.SelectedIndex].UpdatePosts())
+            {
+                lBoxPosts.Items.Add(post);
+            }
+        }
+        private void Save()
+        {
+            string output = JsonConvert.SerializeObject(GAMING);
+            File.WriteAllText(GAMING.BoardName + ".json", output);
+        }
+
+
 
         private void lBoxTopics_SelectedIndexChanged(object sender, EventArgs e)
         {
             lBoxPosts.Items.Clear();
             try
             {
-                foreach (Post post in GAMING.topicList[lBoxTopics.SelectedIndex].posts)
+                foreach (string post in GAMING.topicList[lBoxTopics.SelectedIndex].UpdatePosts())
                 {
-                    lBoxPosts.Items.Add(post.Text);
+                    lBoxPosts.Items.Add(post);
                 }
             }
             catch

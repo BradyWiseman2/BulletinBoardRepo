@@ -32,7 +32,6 @@
             lBoxPosts = new ListBox();
             btnPost = new Button();
             tBoxPost = new TextBox();
-            tBoxTopic = new TextBox();
             btnTopic = new Button();
             lblUser = new Label();
             SuspendLayout();
@@ -58,7 +57,7 @@
             // 
             // btnPost
             // 
-            btnPost.Location = new Point(500, 250);
+            btnPost.Location = new Point(672, 216);
             btnPost.Name = "btnPost";
             btnPost.Size = new Size(106, 23);
             btnPost.TabIndex = 2;
@@ -68,23 +67,16 @@
             // 
             // tBoxPost
             // 
-            tBoxPost.Location = new Point(279, 250);
+            tBoxPost.Location = new Point(279, 216);
             tBoxPost.Name = "tBoxPost";
-            tBoxPost.Size = new Size(215, 23);
+            tBoxPost.Size = new Size(389, 23);
             tBoxPost.TabIndex = 3;
-            // 
-            // tBoxTopic
-            // 
-            tBoxTopic.Location = new Point(12, 250);
-            tBoxTopic.Name = "tBoxTopic";
-            tBoxTopic.Size = new Size(261, 23);
-            tBoxTopic.TabIndex = 4;
             // 
             // btnTopic
             // 
-            btnTopic.Location = new Point(198, 279);
+            btnTopic.Location = new Point(12, 217);
             btnTopic.Name = "btnTopic";
-            btnTopic.Size = new Size(75, 23);
+            btnTopic.Size = new Size(261, 23);
             btnTopic.TabIndex = 5;
             btnTopic.Text = "New Topic";
             btnTopic.UseVisualStyleBackColor = true;
@@ -93,7 +85,7 @@
             // lblUser
             // 
             lblUser.AutoSize = true;
-            lblUser.Location = new Point(546, 328);
+            lblUser.Location = new Point(12, 426);
             lblUser.Name = "lblUser";
             lblUser.Size = new Size(38, 15);
             lblUser.TabIndex = 6;
@@ -106,13 +98,12 @@
             ClientSize = new Size(800, 450);
             Controls.Add(lblUser);
             Controls.Add(btnTopic);
-            Controls.Add(tBoxTopic);
             Controls.Add(tBoxPost);
             Controls.Add(btnPost);
             Controls.Add(lBoxPosts);
             Controls.Add(lBoxTopics);
             Name = "Form1";
-            Text = "Form1";
+            Text = "Gaming Board";
             ResumeLayout(false);
             PerformLayout();
         }
@@ -123,7 +114,6 @@
         private ListBox lBoxPosts;
         private Button btnPost;
         private TextBox tBoxPost;
-        private TextBox tBoxTopic;
         private Button btnTopic;
         private Label lblUser;
     }

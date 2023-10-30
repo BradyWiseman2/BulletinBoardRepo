@@ -12,12 +12,16 @@ namespace Bulletin_Board_Project
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-           bool thing = UserHelper.Login(tBoxLoginUser.Text, tBoxLoginPass.Text);
+            bool thing = UserHelper.Login(tBoxLoginUser.Text, tBoxLoginPass.Text);
             if (thing)
             {
                 User u = JsonConvert.DeserializeObject<User>(File.ReadAllText(tBoxLoginUser.Text + ".json"));
                 Form1 bruh = new Form1(u);
                 bruh.Show();
+            }
+            else
+            {
+                MessageBox.Show("Login failed");
             }
         }
 
@@ -34,7 +38,16 @@ namespace Bulletin_Board_Project
                     Form1 bruh = new Form1(u);
                     bruh.Show();
                 }
+                else
+                {
+                    MessageBox.Show("Error registering");
+                }
 
+
+            }
+            else
+            {
+                MessageBox.Show("Passwords do not match");
             }
         }
     }

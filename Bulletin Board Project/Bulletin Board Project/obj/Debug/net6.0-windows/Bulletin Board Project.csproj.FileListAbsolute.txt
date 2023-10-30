@@ -37,3 +37,4 @@ C:\Users\brady.wiseman\Source\Repos\BulletinBoardRepo\Bulletin Board Project\Bul
 C:\Users\brady.wiseman\Source\Repos\BulletinBoardRepo\Bulletin Board Project\Bulletin Board Project\obj\Debug\net6.0-windows\Bulletin Board Project.genruntimeconfig.cache
 C:\Users\brady.wiseman\Source\Repos\BulletinBoardRepo\Bulletin Board Project\Bulletin Board Project\obj\Debug\net6.0-windows\ref\Bulletin Board Project.dll
 C:\Users\brady.wiseman\source\repos\BulletinBoardRepo\Bulletin Board Project\Bulletin Board Project\obj\Debug\net6.0-windows\Bulletin_Board_Project.Login.resources
+C:\Users\brady.wiseman\Source\Repos\BulletinBoardRepo\Bulletin Board Project\Bulletin Board Project\obj\Debug\net6.0-windows\Bulletin_Board_Project.newTopic.resources
