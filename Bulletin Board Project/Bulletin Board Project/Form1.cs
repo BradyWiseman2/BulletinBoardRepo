@@ -76,6 +76,7 @@ namespace Bulletin_Board_Project
             {
                 lBoxTopics.Items.Add(topic.TopicName);
             }
+            Save();
         }
 
         private void RefreshPosts()

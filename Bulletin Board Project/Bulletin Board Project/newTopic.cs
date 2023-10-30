@@ -30,8 +30,7 @@ namespace Bulletin_Board_Project
                 Topic newtopic = new Topic(tBoxTopicName.Text,
                 new Post(LoggedInUser.UserName, tBoxPostText.Text));
                 ActiveBoard.topicList.Add(newtopic);
-                string output = JsonConvert.SerializeObject(ActiveBoard);
-                File.WriteAllText("T:\\Gamin" + ActiveBoard.BoardName + ".json", output);
+               
                 this.Close();
             }
             else
