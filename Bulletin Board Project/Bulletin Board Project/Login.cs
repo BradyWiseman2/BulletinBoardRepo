@@ -15,7 +15,7 @@ namespace Bulletin_Board_Project
             bool thing = UserHelper.Login(tBoxLoginUser.Text, tBoxLoginPass.Text);
             if (thing)
             {
-                User u = JsonConvert.DeserializeObject<User>(File.ReadAllText(tBoxLoginUser.Text + ".json"));
+                User u = JsonConvert.DeserializeObject<User>(File.ReadAllText("T:\\Gamin\\Users\\" +tBoxLoginUser.Text + ".json"));
                 Form1 bruh = new Form1(u);
                 bruh.Show();
             }
@@ -34,7 +34,7 @@ namespace Bulletin_Board_Project
 
                 if (thing)
                 {
-                    User u = JsonConvert.DeserializeObject<User>(File.ReadAllText(tBoxRegUser.Text + ".json"));
+                    User u = JsonConvert.DeserializeObject<User>(File.ReadAllText("T:\\Gamin\\Users\\"+ tBoxRegUser.Text + ".json"));
                     Form1 bruh = new Form1(u);
                     bruh.Show();
                 }
