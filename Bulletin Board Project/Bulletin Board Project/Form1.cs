@@ -89,7 +89,7 @@ namespace Bulletin_Board_Project
         private void Save()
         {
             string output = JsonConvert.SerializeObject(GAMING);
-            File.WriteAllText("T:\\Gamin\\"+GAMING.BoardName + ".json", output);
+            File.WriteAllText("T:\\Gamin\\" + GAMING.BoardName + ".json", output);
         }
 
 
@@ -110,6 +110,15 @@ namespace Bulletin_Board_Project
             }
 
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            lBoxTopics.Items.Clear();
+            foreach (Topic topic in GAMING.topicList)
+            {
+                lBoxTopics.Items.Add(topic.TopicName);
+            }
         }
     }
 }

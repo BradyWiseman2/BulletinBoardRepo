@@ -34,6 +34,7 @@
             btnTopic = new Button();
             lblUser = new Label();
             lBoxPosts = new ListBox();
+            button1 = new Button();
             SuspendLayout();
             // 
             // lBoxTopics
@@ -93,11 +94,22 @@
             lBoxPosts.Size = new Size(509, 199);
             lBoxPosts.TabIndex = 1;
             // 
+            // button1
+            // 
+            button1.Location = new Point(12, 246);
+            button1.Name = "button1";
+            button1.Size = new Size(261, 23);
+            button1.TabIndex = 7;
+            button1.Text = "Refresh Topics";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(button1);
             Controls.Add(lblUser);
             Controls.Add(btnTopic);
             Controls.Add(tBoxPost);
@@ -118,5 +130,6 @@
         private Button btnTopic;
         private Label lblUser;
         private ListBox lBoxPosts;
+        private Button button1;
     }
 }
