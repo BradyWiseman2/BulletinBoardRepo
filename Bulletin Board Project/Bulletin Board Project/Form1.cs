@@ -14,7 +14,6 @@ namespace Bulletin_Board_Project
         public Form1(User user)
         {
             InitializeComponent();
-
             try
             {
                 string text = File.ReadAllText("T:\\Gamin\\GAMING.json");
@@ -81,6 +80,8 @@ namespace Bulletin_Board_Project
 
         private void RefreshPosts()
         {
+            string text = File.ReadAllText("T:\\Gamin\\GAMING.json");
+            GAMING = JsonConvert.DeserializeObject<Board>(text);
             lBoxPosts.Items.Clear();
             foreach (string post in GAMING.topicList[lBoxTopics.SelectedIndex].UpdatePosts())
             {
@@ -97,6 +98,8 @@ namespace Bulletin_Board_Project
 
         private void lBoxTopics_SelectedIndexChanged(object sender, EventArgs e)
         {
+            string text = File.ReadAllText("T:\\Gamin\\GAMING.json");
+            GAMING = JsonConvert.DeserializeObject<Board>(text);
             lBoxPosts.Items.Clear();
             try
             {
@@ -115,11 +118,18 @@ namespace Bulletin_Board_Project
 
         private void button1_Click(object sender, EventArgs e)
         {
+            string text = File.ReadAllText("T:\\Gamin\\GAMING.json");
+            GAMING = JsonConvert.DeserializeObject<Board>(text);
             lBoxTopics.Items.Clear();
             foreach (Topic topic in GAMING.topicList)
             {
                 lBoxTopics.Items.Add(topic.TopicName);
             }
+        }
+
+        private void RefreshPostTimer_Tick(object sender, EventArgs e)
+        {
+            RefreshPosts();
         }
     }
 }

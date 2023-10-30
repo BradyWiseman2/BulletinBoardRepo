@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             lBoxTopics = new ListBox();
             btnPost = new Button();
             tBoxPost = new TextBox();
@@ -35,6 +36,7 @@
             lblUser = new Label();
             lBoxPosts = new ListBox();
             button1 = new Button();
+            RefreshPostTimer = new System.Windows.Forms.Timer(components);
             SuspendLayout();
             // 
             // lBoxTopics
@@ -104,6 +106,11 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
+            // RefreshPostTimer
+            // 
+            RefreshPostTimer.Interval = 1000;
+            RefreshPostTimer.Tick += RefreshPostTimer_Tick;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -131,5 +138,6 @@
         private Label lblUser;
         private ListBox lBoxPosts;
         private Button button1;
+        private System.Windows.Forms.Timer RefreshPostTimer;
     }
 }
