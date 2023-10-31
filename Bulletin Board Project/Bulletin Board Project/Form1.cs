@@ -83,7 +83,7 @@ namespace Bulletin_Board_Project
         {
             string text = File.ReadAllText("T:\\Gamin\\GAMING.json");
             GAMING = JsonConvert.DeserializeObject<Board>(text);
-            if (lBoxTopics.SelectedIndex != null)
+            if (lBoxTopics.SelectedIndex != -1)
             {
                 lBoxPosts.Items.Clear();
 

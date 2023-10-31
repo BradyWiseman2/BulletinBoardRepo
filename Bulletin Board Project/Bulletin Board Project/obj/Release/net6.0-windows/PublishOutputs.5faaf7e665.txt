@@ -1,0 +1,6 @@
+C:\Users\brady.wiseman\source\repos\BulletinBoardRepo\Bulletin Board Project\Bulletin Board Project\bin\Release\net6.0-windows\publish\Bulletin Board Project.exe
+C:\Users\brady.wiseman\source\repos\BulletinBoardRepo\Bulletin Board Project\Bulletin Board Project\bin\Release\net6.0-windows\publish\Bulletin Board Project.dll
+C:\Users\brady.wiseman\source\repos\BulletinBoardRepo\Bulletin Board Project\Bulletin Board Project\bin\Release\net6.0-windows\publish\Bulletin Board Project.deps.json
+C:\Users\brady.wiseman\source\repos\BulletinBoardRepo\Bulletin Board Project\Bulletin Board Project\bin\Release\net6.0-windows\publish\Bulletin Board Project.runtimeconfig.json
+C:\Users\brady.wiseman\source\repos\BulletinBoardRepo\Bulletin Board Project\Bulletin Board Project\bin\Release\net6.0-windows\publish\Bulletin Board Project.pdb
+C:\Users\brady.wiseman\source\repos\BulletinBoardRepo\Bulletin Board Project\Bulletin Board Project\bin\Release\net6.0-windows\publish\Newtonsoft.Json.dll
