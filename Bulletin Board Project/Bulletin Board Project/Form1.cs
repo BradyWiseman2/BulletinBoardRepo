@@ -13,6 +13,7 @@ namespace Bulletin_Board_Project
 
         public Form1(User user)
         {
+
             InitializeComponent();
             try
             {
@@ -82,10 +83,14 @@ namespace Bulletin_Board_Project
         {
             string text = File.ReadAllText("T:\\Gamin\\GAMING.json");
             GAMING = JsonConvert.DeserializeObject<Board>(text);
-            lBoxPosts.Items.Clear();
-            foreach (string post in GAMING.topicList[lBoxTopics.SelectedIndex].UpdatePosts())
+            if (lBoxTopics.SelectedIndex != null)
             {
-                lBoxPosts.Items.Add(post);
+                lBoxPosts.Items.Clear();
+
+                foreach (string post in GAMING.topicList[lBoxTopics.SelectedIndex].UpdatePosts())
+                {
+                    lBoxPosts.Items.Add(post);
+                }
             }
         }
         private void Save()

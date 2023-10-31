@@ -108,6 +108,7 @@
             // 
             // RefreshPostTimer
             // 
+            RefreshPostTimer.Enabled = true;
             RefreshPostTimer.Interval = 1000;
             RefreshPostTimer.Tick += RefreshPostTimer_Tick;
             // 
