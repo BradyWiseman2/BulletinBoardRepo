@@ -43,6 +43,9 @@ namespace Bulletin_Board_Project
         {
             if (lBoxTopics.SelectedItem != null && tBoxPost.Text != "")
             {
+                string text = File.ReadAllText("T:\\Gamin\\GAMING.json");
+                GAMING = JsonConvert.DeserializeObject<Board>(text);
+
                 GAMING.topicList[lBoxTopics.SelectedIndex].posts.Add(new Post(
                    LoggedInUser.UserName,
                    tBoxPost.Text));
@@ -95,8 +98,7 @@ namespace Bulletin_Board_Project
         }
         private void Save()
         {
-            string text = File.ReadAllText("T:\\Gamin\\GAMING.json");
-            GAMING = JsonConvert.DeserializeObject<Board>(text);
+            
             string output = JsonConvert.SerializeObject(GAMING);
             File.WriteAllText("T:\\Gamin\\" + GAMING.BoardName + ".json", output);
         }
