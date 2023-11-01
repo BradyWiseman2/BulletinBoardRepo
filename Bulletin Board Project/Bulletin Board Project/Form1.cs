@@ -95,6 +95,8 @@ namespace Bulletin_Board_Project
         }
         private void Save()
         {
+            string text = File.ReadAllText("T:\\Gamin\\GAMING.json");
+            GAMING = JsonConvert.DeserializeObject<Board>(text);
             string output = JsonConvert.SerializeObject(GAMING);
             File.WriteAllText("T:\\Gamin\\" + GAMING.BoardName + ".json", output);
         }

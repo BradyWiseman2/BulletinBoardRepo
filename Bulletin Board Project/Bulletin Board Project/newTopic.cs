@@ -27,6 +27,8 @@ namespace Bulletin_Board_Project
         {
             if (tBoxPostText.Text != "" && tBoxTopicName.Text != "")
             {
+                string text = File.ReadAllText("T:\\Gamin\\GAMING.json");
+                ActiveBoard = JsonConvert.DeserializeObject<Board>(text);
                 Topic newtopic = new Topic(tBoxTopicName.Text,
                 new Post(LoggedInUser.UserName, tBoxPostText.Text));
                 ActiveBoard.topicList.Add(newtopic);
